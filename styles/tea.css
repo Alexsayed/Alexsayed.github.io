@@ -1,0 +1,35 @@
+
+/*When click fruit checkbox*/
+.black{ 
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When veggie bake checkbox*/
+.green{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When meat is clicked*/
+.herb {
+	display: inline-block !important;
+	height: 250px;	
+}
+
+@media screen and (max-width: 550px) {
+	.toTheRight .black{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .green{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .herb {
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+}
+

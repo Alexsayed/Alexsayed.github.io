@@ -1,0 +1,47 @@
+#loginContainer{
+	width: 300px;
+	height: 280px;
+	/*background-color: gray;*/
+	text-align: center;
+	position: absolute;
+	top:100px;
+	left: 40%;
+	border:1px solid #d3d9de;
+}
+form{
+	/*text-align: center;*/
+
+}
+input{
+	display: block;
+	margin: auto;	
+	padding: 0 0 0 10px;
+	height: 30px;
+	width: 250px;
+	margin-top: 20px;
+	border-radius: 3%;
+	outline: none;
+	border:1px solid #d3d9de;
+}
+button, #forgot{
+	float: left;
+	margin-bottom: 20px;
+}
+button{
+	margin: 20px 20px 0 20px;
+	width: 70px;
+	height: 25px;
+	background-color: #ec8c0cc9;
+	border-radius: 5%;
+}
+#forgot{
+	margin: 25px 0 0 0;
+	font-size: 13px;
+	
+}
+.signup {
+	margin-top: 80px;
+	height: 40px;
+
+}
+

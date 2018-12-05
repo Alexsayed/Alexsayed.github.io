@@ -1,0 +1,326 @@
+html, body {
+	/* To make text color smooth or less sharp */
+	-webkit-font-smoothing: antialiased;
+	/*Height between lines*/
+	line-height: 1.2em; 
+	/*to clear all white spaces around*/
+	width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'Fjalla One', sans-serif;
+    /*font-size: 5vw;*/
+}
+#pageWrapper{
+	width: 100%;
+}
+/*Change color of all <a> tags */
+a {
+	color: #ec8c0cc9;
+	text-decoration: none !important;	
+	/*font-size: 2vw;*/
+}
+/*The header*/
+#theHeader{
+	padding-top: 1rem;
+	height: 50px;
+	background-color: #2b5b77;
+	letter-spacing: 0.1em;
+	font-size: 14px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	/*font-size: 2vw;*/
+}
+/* The header container*/
+.HeaderContainer{
+	padding: 0 3rem;
+}
+/*The logo*/
+.myLogo{
+	float: left;
+}
+/*The info menu*/
+.onDisktop{
+	float: right;
+	width: 250px;
+	height: 30px;
+}
+/*The contact container 3 elements in it */
+.contactContainer{
+	width: 270px;
+	height: 30px;
+	/* If we don't put this property the Search Icon will show in next line(under contacts, location and about) */
+	display: inline-block;
+	align-items: right;
+}
+/* Search Icon */
+.iconButton{
+	display: inline-block;
+    height: 16px;
+    width: 16px;
+    vertical-align: top;
+}
+#disktopContactInfo a{
+	/* The space between <a> tags in disktopContactInfo div */
+	padding-right: 1rem;	
+}
+#menuBar{
+	height: 45px;
+	/* To hide the menu under hamburger if it's getting small*/
+	overflow: hidden;
+	background-color: #4e4545;
+	padding: 0;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+/* <ul> */
+#menu{
+	height: inherit;
+	margin: 0;
+	width: 100%;
+}
+.menuItem{
+	display: block; 
+	line-height: 45px;
+	text-transform: uppercase;
+	padding:0 5px 0 5px;
+	/*margin: 10px 15px 9px 15px;*/
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	/*When we hover our mouse the menu text background should change slowly */
+	transition: all 0.7s;
+	/* For Safari*/
+	-webkit-transition: all 0.7s;
+	/* For FireFox*/
+	-moz-transition: all 0.7s;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	/*background-color:  rgb(179, 194, 227);*/
+}
+/* <li class="category">s.  */
+.category{
+	/*letter-spacing: .1em;*/
+	/*height: inherit;*/
+	/* Li to stay in row and remove the bullet points*/
+	display: inline-block;
+	margin: 0 15px;	
+}
+.dropDown {  
+	display: none;
+	/*width: 600px;*/
+	position: absolute;
+	height: auto;
+}
+.sub {
+	/*only <ul class="sub> should be in horizontal*/
+	display: inline-block;
+	background-color: #e6e6e6;
+	width: 200px;
+	height: inherit;
+	border-right:1px solid rgb(200, 200, 200);
+	border-left:1px solid rgb(200, 200, 200);
+	margin-right: -5px;
+	padding:0px;
+	
+}
+
+.menuItem:hover{
+	background-color: #b8c0dc59;
+}
+.sub li {
+	display: block;
+	padding: 15px 0 15px 15px;	
+}
+.sub a{
+	/*font-size: .9em;*/
+	font-weight: bold;
+	color: #4e4040cf;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); 
+	padding: 0 15px 0 5px;
+	border-radius: 5%;
+}
+
+.sub a:hover{
+	background-color: rgb(200, 200, 200);
+	transition: all 0.3s;
+	/* For Safari*/
+	-webkit-transition: all 0.3s;
+	/* For FireFox*/
+	-moz-transition: all 0.3s;
+}
+/* Mouseover for sub menus in hamburger mode*/
+a:hover + .dropDown, .dropDown:hover{
+	display: inline-block;
+		/*background-color: red;*/
+}
+.searchBox{
+	display: inline-block;
+	float: right;
+	width: 165px;
+	background-color: #f3f3f3;
+	height: 25px;
+	margin-top: 9px;
+	margin-right: 100px;
+	border-radius: 2%;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
+ .searchBox input{
+	outline: none;
+	padding-top: 2px;
+	width: 130px;
+	padding-left: 7px;
+	height: 23px;
+	background-color: #f3f3f3;
+	border-radius: 2%;
+}
+ span i{
+	padding-top: 4px;
+	color: #ec8c0cc9;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+/*The hamburger with toggle class (change)*/
+.hamburgerContainer {
+	width: calc(100% - 160px);
+	display: none;
+	margin: 9px 0 0 30px;
+}
+.hambuger1, .hambuger2, .hambuger3 {
+    width: 27px;
+    height: 4px;
+    background-color: #ec8c0cc9;;
+    margin: 4px 0;
+    transition: 0.4s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+/* Rotate first bar */
+.change .hambuger1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+	 transform: rotate(-45deg) translate(-7px, 6px);
+}
+/* Fade out the second bar */
+.change .hambuger2 {
+    opacity: 0;
+}
+/* Rotate last bar */
+.change .hambuger3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-4px, -5px) ;
+}
+/*Hide the seach box when the window size gets to 772px.*/
+@media screen and (max-width: 800px){
+	.searchBox{ 
+	    display: none;
+	 }
+}
+/*When the page shrinks to 600px: hide menu, move the hamburger to left and show hamburger*/
+@media screen and (max-width: 600px){
+	/*Oreginaly #menuBar li*/
+	#menu{ 
+		display: none;
+	 }
+	.hamburgerContainer{
+		float: left;
+		display: block;	
+	}
+}
+
+.innerMenu{
+	display: none;
+}
+.innerMenu span{
+	color: #ec8c0cc9;
+	cursor: default;
+}
+@media screen and (max-width: 600px) {
+	.responsive{ 
+		position: absolute;
+		top: 95px;
+		display: inline-block;
+		width: 200px;
+		background-color:#4e4545 ; 
+		padding-top: 10px;
+		border:1px solid gray;
+	 }
+	.innerMenu li {
+		display: block;
+		font-size: 15px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+		float: none;
+		margin: 0 0 20px -20px;
+	}
+}
+/* the Footer*/
+ .copy, .siteInfo{
+ 	float: left;
+ 	padding: 0 0 0 27px;
+ 	color: #5f6368 !important;
+ }
+ .siteInfo a{
+ 	color: #5f6368 !important;
+ }
+ #footer{
+ 	   background-color: #f2f2f2;
+ 	    border-top: 1px solid #e4e4e4;
+ 	    line-height: 40px;
+ 	    min-width: 980px;
+ 	    font-size: 10px;
+ 	    height: 40px;
+ 	    width: 100%;
+ 	    /*font-size: 9pt;*/
+ 	    position: fixed;
+ 	    top: 542px;
+ }
+
+/*HOME PAGE CSS ENDS HERE*/
+.plus{
+	margin: 5px 10px 0 0;
+	width: 15px;
+	float: right;
+}
+.ver, .har{
+    width: 13px;
+    height: 3px;
+    background-color: #ec8c0cc9;;
+    margin: 4px 0;
+    transition: 0.4s;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    border-radius: 15% 
+}
+.har{
+	-webkit-transform: rotate(90deg) translate(-7px, 0px);
+}
+.minus{
+	display: none;
+}
+/*Products menu before plus icon is clicked*/
+#hamProductsDropDown{
+	display: none;
+}
+/*Beverage menu before plus icon is clicked*/
+#hamBavDropDown{
+	display: none;
+}
+/*Chocolate menu before plus icon is clicked*/
+#hamChoDropDown{
+	display: none;
+}
+/*Cigarette  menu before plus icon is clicked*/
+#hamCigDropDown{
+	display: none;
+}
+/*Other products menu before plus icon is clicked*/
+#hamOtherDropDown{
+	display: none;
+}
+.classHamDropDown{
+	display: inline-block !important;
+	position: relative;
+	right: 20px;	
+}
+.classHamDropDown ul li{
+	margin: 5px 0 0 0;
+	font-size: 12px;
+	border:none;
+	
+}

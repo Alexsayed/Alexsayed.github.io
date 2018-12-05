@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canned</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../styles/canned.css">
+	<link rel="stylesheet" type="text/css" href="../styles/milk.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+	<div id="mainContainer">
+		<header id="theHeader">
+				<nav id="myMenu" role = "myNavigation">
+					<div class="HeaderContainer">
+						<a class="myLogo" href="thelink"> Logo</a>
+						<div id="disktopContactInfo" class="onDisktop">
+							<div class="contactContainer">
+								<a class="" href="http:/www.google.com">Contact</a>
+								<a class="" href="contact link">Location</a>
+								<a class="" href="contact link">About</a>
+							</div>	
+						</div>
+						
+					</div>
+			    </nav>
+		</header>
+		<h1>Консервы</h1>
+		<div class="productTypeContainer">
+				<ul class="productTypeUl"> Вид товара
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input type="radio" name="productTypes" value = "Все Продукты"onclick ="radioFunction()">
+							<a href="">Главные</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id ="sugarOnly" type="radio" name="productTypes" value="valBake" onclick ="radioFunction();">
+							<a href="">Фруктовые</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id = "sandSugarOnly" type="radio" name="productTypes" value = "valCorn" onclick ="radioFunction();">
+							<a href="">Овощные</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input  id ="powderSugarOnly" type="radio" name="productTypes" value = "valOlive" onclick ="radioFunction();">
+							<a href="">Тушеные</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input  id ="powderSugarOnly" type="radio" name="productTypes" value = "valOlive" onclick ="radioFunction();">
+							<a href="">Соусы</a> 
+						</div>
+					</li>
+				</ul>
+				<hr>
+			</div>
+			<div class="hamburgerContainer"> 
+				<div class="hambuger1"></div>
+			    <div class="hambuger2"></div>
+			    <div class="hambuger3"></div>
+			</div> 
+			<div class="sortViewDiv">
+					<div class="result"><span class="count"></span></div>
+					<div class="view" onchange="numOfItems()">
+						<label class="viewlabel">Показать всё :</label>
+						<i class="fas fa-th-large selected"></i> 
+						<i class="fas fa-th"></i>
+					</div>
+					<!-- <div class="label"><label class="label">Сортировать:</label></div> -->
+					<div class="sort"><label class="label">Сортировать : </label>
+						<select class="sortField" onchange="sortList()">
+							<!-- <option selected="selected">Best Match</option> -->
+							<option value="low">Low to High</option>
+							<option value="high">High To Low</option>
+							<!-- <div>Best Match</div> -->
+						</select>
+					</div>
+			</div>
+			<div class="itemList">
+			<ul class="itemsUL"> 
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Горчица Столичная Туба 100гр 48шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 33.00р</span>
+				 	</div> -->
+				 	 18.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Горчичный порошок Волжский 200г 15шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 42.00р</span>
+				 	</div> -->
+				 	18.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a  class = "aName" href="">Горошек "Глобекс" 420г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 50.00р</span>
+				 	</div> -->
+				 	22.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Горчица Егорьевская 250г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 54.00р</span>
+				 	</div> -->
+				 	23.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Горошек зелёный Бобович 360г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 58.00р</span>
+				 	</div> -->
+				 	28.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Хрен Егорьвск со свеклой 250г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 65.00р</span>
+				 	</div> -->
+				 	28.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Хрен столовый Егорье 250г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 65.00р</span>
+				 	</div> -->
+				 	28.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сельдь тихоокеанская 250г 48шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 286.00р</span>
+				 	</div> -->
+				 	30.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Кукуруза "Булгарконсерв" 425г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 100.00р</span>
+				 	</div> -->
+				 	30.50р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Кукуруза Глобекс 425мл 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 110.00р</span>
+				 	</div> -->
+				 	30.50р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Концентрат кваса Боровский 500г 20шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 150.00р</span>
+				 	</div> -->
+				 	31.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Горчичный порошок Волжский 400г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 156.00р</span>
+				 	</div> -->
+				 	32.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Фасоль Россана белая 400г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 245.00р</span>
+				 	</div> -->
+				 	33.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Фасоль Россана в томатном соусе 400г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	33.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Фасоль Россана в томатном соусе 400г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	33.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Фасоль Россана красная 400г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	33.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Аджика грузинская 280г 20шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	33.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Горошек Барко 450г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	38.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Маслины Барко 280г 12шт б/к</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	42.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Шампиньоны Рез. Барко 425г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	43.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Шампиньоны Рез. МРС 425г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	43.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Оливки Барко 280г 12шт б/к</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	43.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Ассорти Деко (корнишоны томаты) 670г 8шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	47.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Огурчики Деко (6-9) 720г 8шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	47.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Тушенка Гост 525гр 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	47.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Тушенка гов. Звезда 325г 36шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	50.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сайра нат.тих.Нептун 240г 48шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	52.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Шампиньоны целые 400г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	53.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Ананасы кольца Барко ж/б 580г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	56.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Ананасы кусочки Золотая долина 580г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	56.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Перец пепперони марин. 630г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	57.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Кукуруза Бандюэль 340г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	58.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Огурчики Делькофф корнишоны (3-6) 720г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	59.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Опята мар. "Золотая долина" 450г 12ш</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	71.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Горбуша натур. "балт-фиш" 240г 48шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	71.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Ассорти грибы мар. Золотая дол. 450г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	77.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Тушенка говядина ОВА 325г 36шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	80.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Закуска баклажанов Рест.Обломов 420г 6шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	89.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Виноградные листья Азербайджан 15шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	95.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Абрикосы в сиропе Делькофф 850г 12шт </a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	95.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Персики в сиропе половинки MRS 850г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	95.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Шампиньоны целые 850г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	95.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Каперсы "Сеньорита" 250г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	110.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Огурцы Мост прод 3л 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	115.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Томаты консерв."КБР" 3л 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	115.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Горошек зеленый 3кг 6шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	165.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Томаты MRS очищ.рез. 2650г 6шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	205.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Кукуруза сладкая 3кг 6шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	210.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Шампиньоны рез.Урожай вкуса 3.1кг 6шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	215.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Шампиньоны рез. Делькофф 3.1кг 6шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	220.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Шампиньоны рез. Excellent 3.1кг 6шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	220.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Оливки 850г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	270.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Халапеньо рез. 3.1мл 6шт Индия</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	310.00р шт
+				</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<div class="copy">Copyright © 2018</div>
+			<div class="siteInfo"> 
+				<a href=""> Site info</a>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<script type="text/javascript" src="../scripts/canned.js"></script>
+
+</body>
+</html>

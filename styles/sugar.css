@@ -1,0 +1,44 @@
+
+/*When click sun checkbox*/
+.sugar{ 
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When click bake checkbox*/
+.sandSugar{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When corn is clicked*/
+.powderSugar{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When olive is clicked*/
+.refinedSugar{
+	display: inline-block !important;
+	height: 250px;	
+}
+
+@media screen and (max-width: 550px) {
+	.toTheRight .sugar{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .sandSugar{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .powderSugar{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .refinedSugar{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+}

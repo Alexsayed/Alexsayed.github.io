@@ -1,0 +1,618 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	/*width: 100%;*/
+	background-color: #f1f1f1;
+	-webkit-font-smoothing: antialiased;
+	/*line-height: 1.5em; */
+	overflow-x: hidden;
+	font-family: 'Fjalla One', sans-serif;
+
+}
+a {
+	color: #ec8c0cc9;
+	text-decoration: none !important;
+}
+h1{
+	padding: 10px;
+	margin: 0;
+	color: #4e4545;
+}
+/*All <li> display is set to none so i can individually set them otherwise. Used for chooseByProduct() function*/
+li{
+	display: none;
+}
+/*The header*/
+#theHeader{
+	padding-top: 1rem;
+	height: 50px;
+	background-color: #2b5b77;
+	letter-spacing: 0.1em;
+	font-size: 14px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+}
+/* The header container*/
+.HeaderContainer{
+	padding: 0 3rem;
+}
+/*The logo*/
+.myLogo{
+	float: left;
+}
+/*The info menu*/
+.onDisktop{
+	float: right;
+	width: 250px;
+	height: 30px;
+	
+	
+}
+/*The contact container 3 elements in it */
+.contactContainer{
+	width: 210px;
+	height: 30px;
+	/* If we don't put this property the Search Icon will show in next line(under contacts, location and about) */
+	display: inline-block;
+	align-items: right;
+}
+/* Search Icon */
+.iconButton{
+	display: inline-block;
+    height: 16px;
+    width: 16px;
+    vertical-align: top;
+}
+#disktopContactInfo a{
+	/* The space between <a> tags in disktopContactInfo div */
+	padding-right: 1rem;
+	
+}
+
+.productTypeContainer {
+	width: 18%;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 121px;
+	font-size: 18px;
+	line-height: 2em; 
+	
+
+
+}
+.productTypeUl{
+	padding: 20px 0 0 20px;
+	margin: 0;
+	color: #4e4545;
+	height: 296px;
+
+}
+.productTypeLI {
+	display: block;
+	padding-left: 5px;
+	line-height: 1.6em; 
+	font-size: 15px;
+}
+
+hr{
+	margin: 0;
+	padding: 0;
+	border: 0;
+    height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0),#4e4545, rgba(0, 0, 0, 0));
+}
+
+/*The Sort, view and result <div>*/
+.sortViewDiv{
+	position: absolute;
+	top: 140px;
+	left: 18%;
+	width: 80%;
+	height: 45px;
+	/*border: 1px solid #ddd;*/
+	background-color: white;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+	color: #4e4545;
+}
+.result, .view, .sort, .label{
+	/*To make all <div>s side-by-side*/
+	float: left;
+}
+.result{
+	margin: 15px 0 0 2%;
+	padding: 0 40% 0 0; 
+}
+.view{
+	padding: 0 2% 0 0; 
+	margin: 15px 0 0 0;
+	/*width: 50px;*/
+	height: 30px;
+	
+}
+.fa-th {
+	font-size: 17px;
+	padding: 0 0 0 8px;	
+}
+.fa-th-large{
+	font-size: 17px;
+}
+.selected{
+	/*border:1px solid #ddd;*/
+	color: #ec8c0cc9;
+
+}
+.label{
+	margin: 6px 2px 0 0;
+	font-size: 15px
+}
+.viewlabel{
+	margin-bottom: 10px;
+	font-size: 15px
+}
+.sort{
+	width: 205px;
+	margin: 10px 0 0 0;
+}
+.sortField{
+	margin: 2px 0 0 0;
+	width: 100px;
+	height: 25px;
+    border: .5px solid #ddd;
+  	outline: none;
+  	overflow: hidden;
+}
+
+/*The list of the products*/
+.itemList{
+	width: 80%;
+	position: absolute;
+	top: 187px;
+	left: 18%;
+	background-color: white;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-bottom: 42px;
+}
+.itemsUL{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	/*This font-size is set 0 bc the white space between <li>s*/
+	font-size: 0;
+	box-sizing: border-box;
+
+}
+.itemsUL li {
+	border-bottom:1px solid #ddd;
+	width: 33.333%;
+	/*height: 250px;*/
+	padding: 0;
+	margin: 0;
+
+}
+.itemsUL a{
+	color: #4e4545 !important;
+}
+.itemsUL span{
+	color: #4e4545 !important;
+}
+
+/*display <li>s by lowest price */
+.high {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	/*This font-size is set 0 bc the white space between <li>s*/
+	font-size: 0;
+	/*display: inline-flex; */
+	/* OG row-reverse wrap-reverse;*/
+	/*flex-flow: row-reverse wrap-reverse;*/
+	
+
+}
+/*.high li{
+	border-bottom:1px solid #ddd;
+	width: 33.333%;
+	padding: 0;
+	margin: 0;
+}
+.high a{
+	color: #4e4545 !important;
+}
+.high span{
+	color: #4e4545 !important;
+}*/
+.itemLis {
+	display: inline-block;
+	height: 250px;
+}
+/*Don't dispaly all <li>s*/
+.notDisplayed{
+	display: none;
+	height: 250px;
+}
+/* all <li>s. it's for JS functions*/
+.allLis{
+	font-size: 13px;
+}
+
+
+/*The hamburger with toggle class (change)*/
+.hamburgerContainer {
+	width: calc(100% - 160px);
+	display: none;
+	/*margin: 20px 0 0 7px;*/
+	width: auto;
+
+}
+.hambuger1, .hambuger2, .hambuger3 {
+    width: 27px;
+    height: 4px;
+    background-color: #ec8c0cc9;;
+    margin: 4px 0;
+    transition: 0.4s;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+/* Rotate first bar */
+.change .hambuger1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+	 transform: rotate(-45deg) translate(-7px, 6px);
+}
+/* Remove one of the bar when hamburger is clicked */
+.change .hambuger2 {
+    opacity: 0;
+}
+/* Rotate last bar */
+.change .hambuger3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-4px, -5px) ;
+}
+
+/*When click mayo checkbox*/
+.mayo { 
+	display: inline-block;
+	height: 250px;	
+}
+/*When click matzoon checkbox*/
+.matzoon{
+	display: inline-block;
+	height: 250px;	
+}
+/*When milk is clicked*/
+.milk{
+	display: inline-block;
+	height: 250px;	
+}
+/*When condensed milk is clicked*/
+.condensedMilk{
+	display: inline-block;
+	height: 250px;	
+}
+/*When chz is clicked*/
+.cheese{
+	display: inline-block;
+	height: 250px;	
+}
+/*When whip cream is clicked*/
+.whipCream{
+	display: inline-block;
+	height: 250px;	
+}
+/*When butter is clicked*/
+.butter{
+	display: inline-block;
+	height: 250px;	
+}
+/*When sour cream is clicked*/
+.sourCream{
+	display: inline-block;
+	height: 250px;
+}
+/*When tvorog is clicked*/
+.tvorog{
+	display: inline-block;
+	height: 250px;
+}
+.itemsName{
+	height: 36px;	
+}
+
+	
+@media screen and (max-width: 1055px) {	
+	.result{
+		margin: 15px 0 0 10px;
+		padding: 0 30% 0 0; 
+	}
+	.view{
+		padding: 0 2% 0 0; 
+		margin: 15px 0 0 0;
+	}
+	.label{
+		margin: 7px 2px 0 0;
+		font-size: 13px
+
+	}
+	.viewlabel{
+		margin: 0  0 0;
+		font-size: 13px
+	}
+	.sort{
+		margin: 10px 0 0 0;
+
+	}
+	.sortField{
+		margin: 3px 0 0 0;
+		width: 100px;
+		height: 22px;
+	
+	}
+	/*.fa-th{
+		font-size: 16.5px;
+	}*/	
+}
+
+@media screen and (max-width: 841px) {
+	.result{
+		margin: 15px 0 0 10px;
+		padding: 0 20% 0 0; 
+		font-size: 15px;
+	}
+	.view{
+		padding: 0 2% 0 0; 
+		margin: 12px 0 0 10px;
+	}
+	.label{
+		margin: 7px 2px 0 0;
+		font-size: 10px
+	}
+	.viewlabel{
+		margin: 0 0 0 0;
+		font-size: 10px
+	}
+	.sort{
+		margin: 10px 0 0 0;
+		width: 180px;
+	}
+	.sortField{
+		width: 100px;
+		height: 20px;
+	}
+	img{
+		width: 70px;
+		height: 70px;
+	}
+	.itemsUL li {
+		height: 180px;
+	}
+	.itemsUL li a{
+		font-size: 10px !important;
+	}
+	.high li {
+		height: 180px;
+	}
+	.high li a{
+		font-size: 10px !important;
+	}
+	.productTypeContainer li{
+		font-size: 11px;
+	}
+	.productTypeUl{
+		font-size: 15px;
+		height: 250px;
+	}
+}
+@media screen and (max-width: 680px) {
+	.productTypeUl {
+		display: none;	
+	}
+	hr{
+		display: none;
+	}
+	.productTypeUl  li{
+		font-size: 13px;
+	}
+	.sortViewDiv{
+		position: absolute;
+		top: 140px;
+		left: 50px;
+		width: 90%;
+	}
+	.itemList{
+		width: 90%;
+		position: absolute;
+		top: 187px;
+		left: 50px;
+	}
+	.hamburgerContainer{
+		float: left;
+		display: block;
+		position: absolute;
+		top: 140px;
+		left: 12px;
+	}
+	.responsive{ 
+		position: absolute;
+		top: 35px;
+		display: inline-block;
+		width: 150px;
+		padding-top: 20px;
+	}
+	/*The css method is add in JS to products div class and sortViewDiv class*/
+	.toTheRight{
+		position: absolute;
+		left: 175px;
+		width: 69%;
+	}
+	.result{
+		margin: 15px 0 0 10px;
+		padding: 0 10% 0 0; 
+	}
+	.result span{
+		font-size: 10px;
+	}
+	.view{
+		padding: 0 4% 0 0; 
+		margin: 12px 0 0 10px;
+	}
+	.label{
+		margin: 7px 2px 0 0;
+		font-size: 10px;
+	}
+	.sort{
+		margin: 10px 0 0 0;
+		width: 130px;
+		padding: 0 0 0 4%; 
+	}
+	.sortField{
+		width: 50px;
+		height: 20px;
+		-webkit-appearance: ;
+	}
+	.itemsUL li {
+		height: 180px;
+	}
+	.itemsUL li a{
+		font-size: 10px !important;
+	}
+	.itemsUL li span{
+		font-size: 11px !important;
+	}
+	.high li {
+		height: 180px;
+	}
+	.high li a{
+		font-size: 10px !important;
+	}
+	.high li span{
+		font-size: 11px !important;
+	}
+	img{
+		width: 70px;
+		height: 70px;
+	}	
+}
+@media screen and (max-width: 550px) {
+
+	.toTheRight{
+		width: 65%
+	}
+	/*The products list's <li>s (.itemLis). we can use this way or (.toTheRight li{})*/
+	.toTheRight .itemLis{
+		display: block;
+		line-height: 2.5em;
+		width: inherit;
+	}
+	/*The products list's <li>s (.high). we can use this way or (.toTheRight li{})*/
+	.toTheRight .high  {
+		display: inline;
+		line-height: 2.5em;
+	}
+	
+	/*The products list's price <div>.*/
+	.toTheRight .prc{
+		/*border-bottom: 1px solid #ddd;*/
+	}
+	.toTheRight .mayo{
+		display: block;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .matzoon{
+		display: block;
+		line-height: 2.5em;
+		width: inherit;
+	}
+	.toTheRight .milk{
+		display: block;
+		line-height: 2.5em;
+		width: inherit;
+	}
+	.toTheRight .condensedMilk{
+		display: block;
+		line-height: 2.5em;
+		width: inherit;
+	}
+	.toTheRight .cheese{
+		display: block;
+		line-height: 2.5em;
+		width: inherit;
+	}
+	.toTheRight .butter{
+		display: inline;
+		line-height: 2.5em;
+		width: inherit;
+	}
+	.toTheRight .whipCream{
+		display: block;
+		line-height: 2.5em;
+		width: inherit;
+	}
+	.toTheRight .sourCream{
+		display: block;
+		line-height: 2.5em;
+		width: inherit;
+	}
+	.toTheRight .tvorog{
+		display: block;
+		line-height: 2.5em;
+		width: inherit;
+	}
+}
+@media screen and (max-width: 492px) {
+	.sortField{
+		width: 20px;
+		height: 20px;
+	}
+	.result{
+		margin: 15px 0 0 10px;
+		padding: 0 5% 0 0;
+		font-size: 13px;
+	}
+	.itemList{
+		width: 87%;
+		position: absolute;
+		top: 187px;
+		left: 50px;
+	}
+	.sortViewDiv{
+		width: 87%;
+		position: absolute;
+		top: 140px;
+		left: 50px;	
+	}
+	.sort{
+		margin: 10px 0 0 0;
+		width: 130px;
+		padding: 0 0 0 1%; 
+	}
+	.toTheRight{
+		position: absolute;
+		left: 155px;
+		width: 63%;
+	}
+}
+/* the Footer*/
+  .siteInfo, .copy{
+ 	float: left;
+ 	padding: 0 0 0 27px;
+ 	color: #5f6368 !important;
+ }
+ .siteInfo a{
+ 	color: #5f6368 !important;
+ }
+ #footer{
+ 	background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    line-height: 40px;
+	min-width: 980px;
+ 	font-size: 10pt;
+    height: 40px;
+    width: 100%;
+    font-size: 9pt;
+    position: fixed;
+    top: 542px;
+ }
+ 

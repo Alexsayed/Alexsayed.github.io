@@ -1,0 +1,87 @@
+
+/*When click sun checkbox*/
+.sun { 
+	display: inline-block  !important;
+	height: 250px;	
+}
+/*When click bake checkbox*/
+.bake{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When corn is clicked*/
+.corn{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When olive is clicked*/
+.olive{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When spred is clicked*/
+.spred{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When clarified Butter is clicked*/
+.clarButter{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When refined is clicked*/
+.refined{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When sour cream is clicked*/
+.frie{
+	display: inline-block !important;
+	height: 250px;
+}
+
+@media screen and (max-width: 550px) {
+	.toTheRight .sun{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .bake{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .corn{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .olive{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .spred{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .refined{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .clarButter{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .frie{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+}
+
+
+ 

@@ -1,0 +1,34 @@
+
+/*When click fruit checkbox*/
+.original{ 
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When veggie bake checkbox*/
+.cappuccino{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When meat is clicked*/
+.espresso {
+	display: inline-block !important;
+	height: 250px;	
+}
+
+@media screen and (max-width: 550px) {
+	.toTheRight .original{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .cappuccino{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .espresso {
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chocolate</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../styles/chocolate.css">
+	<link rel="stylesheet" type="text/css" href="../styles/milk.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+	<div id="mainContainer">
+		<header id="theHeader">
+				<nav id="myMenu" role = "myNavigation">
+					<div class="HeaderContainer">
+						<a class="myLogo" href="../index.html"> Logo</a>
+						<div id="disktopContactInfo" class="onDisktop">
+							<div class="contactContainer">
+								<a class="" href="http:/www.google.com">Contact</a>
+								<a class="" href="contact link">Location</a>
+								<a class="" href="contact link">About</a>
+							</div>	
+						</div>
+						
+					</div>
+			    </nav>
+		</header>
+		<h1>Шоколад</h1>
+		<div class="productTypeContainer">
+				<ul class="productTypeUl"> Вид товара
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input type="radio" name="productTypes" value = "Все Продукты"onclick ="radioFunction()">
+							<a href="">Главные</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id ="sugarOnly" type="radio" name="productTypes" value="valBake" onclick ="radioFunction();">
+							<a href="">Тёмный</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id = "sandSugarOnly" type="radio" name="productTypes" value = "valCorn" onclick ="radioFunction();">
+							<a href="">Молочный</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id = "sandSugarOnly" type="radio" name="productTypes" value = "valCorn" onclick ="radioFunction();">
+							<a href="">Суш. фрукты</a>
+						</div>
+					</li>
+				</ul>
+				<hr>
+			</div>
+			<div class="hamburgerContainer"> 
+				<div class="hambuger1"></div>
+			    <div class="hambuger2"></div>
+			    <div class="hambuger3"></div>
+			</div> 
+			<div class="sortViewDiv">
+					<div class="result"><span class="count"></span></div>
+					<div class="view" onchange="numOfItems()">
+						<label class="viewlabel">Показать всё :</label>
+						<i class="fas fa-th-large selected"></i> 
+						<i class="fas fa-th"></i>
+					</div>
+					<!-- <div class="label"><label class="label">Сортировать:</label></div> -->
+					<div class="sort"><label class="label">Сортировать : </label>
+						<select class="sortField" onchange="sortList()"> 
+							<!-- <option selected="selected">Best Match</option> -->
+							<option value="low">Low to High</option>
+							<option value="high">High To Low</option>
+							<!-- <div>Best Match</div> -->
+						</select>
+					</div>
+			</div>
+			<div class="itemList">
+			<ul class="itemsUL"> 
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Несквик 48г 36шт 8бл</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 33.00р</span>
+				 	</div> -->
+				 	 20.00р упак
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">М&МS 36г криспи 32шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 42.00р</span>
+				 	</div> -->
+				 	25.00р упак
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a  class = "aName" href="">Bounty 81г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 50.00р</span>
+				 	</div> -->
+				 	35.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сникерс 95г 32шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 54.00р</span>
+				 	</div> -->
+				 	35.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Альпен голд каппучино 90г 20шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 58.00р</span>
+				 	</div> -->
+				 	37.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Твикс 85г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 65.00р</span>
+				 	</div> -->
+				 	40.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">КитКат вафли 87г 20шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 65.00р</span>
+				 	</div> -->
+				 	45.00р упак
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Чоко-пай 180г 16шт </a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 286.00р</span>
+				 	</div> -->
+				 	50.00р упак
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Торт Коровка РФ 200г 6шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 100.00р</span>
+				 	</div> -->
+				 	59.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Бабаевский горький 100г 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 110.00р</span>
+				 	</div> -->
+				 	60.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Бабаевский люкс 100г</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 150.00р</span>
+				 	</div> -->
+				 	60.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Победа шоколад 100г 20шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 156.00р</span>
+				 	</div> -->
+				 	1170.00р упак
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Rich молочный шок.с орехом 70гр 10шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	63.00р шт
+				</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<div class="copy">Copyright © 2018</div>
+			<div class="siteInfo"> 
+				<a href=""> Site info</a>
+			</div>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript" src="../scripts/chocolate.js"></script>
+
+</body>
+</html>

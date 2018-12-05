@@ -1,0 +1,53 @@
+
+/*When click sun checkbox*/
+.spaghetti{ 
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When click bake checkbox*/
+.macaroni{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When corn is clicked*/
+.noodle{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When olive is clicked*/ 
+.dasherak{
+	display: inline-block !important;
+	height: 250px;	
+}
+.vermicelli{
+	display: inline-block !important;
+	height: 250px;	
+}
+
+@media screen and (max-width: 550px) {
+	.toTheRight .spaghetti{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .macaroni{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .noodle{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .dasherak{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .vermicelli{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+}

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>spaghetti</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../styles/spaghetti.css">
+	<link rel="stylesheet" type="text/css" href="../styles/milk.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+	<div id="mainContainer">
+		<header id="theHeader">
+				<nav id="myMenu" role = "myNavigation">
+					<div class="HeaderContainer">
+						<a class="myLogo" href="thelink"> Logo</a>
+						<div id="disktopContactInfo" class="onDisktop">
+							<div class="contactContainer">
+								<a class="" href="http:/www.google.com">Contact</a>
+								<a class="" href="contact link">Location</a>
+								<a class="" href="contact link">About</a>
+							</div>	
+						</div>
+						
+					</div>
+			    </nav>
+		</header>
+		<h1>Макароны</h1>
+		<div class="productTypeContainer">
+				<ul class="productTypeUl"> Вид товара
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input type="radio" name="productTypes" value = "Все Продукты"onclick ="radioFunction()">
+							<a href="">Главные</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id ="sugarOnly" type="radio" name="productTypes" value="valBake" onclick ="radioFunction();">
+							<a href="">Спагетти</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id = "sandSugarOnly" type="radio" name="productTypes" value = "valCorn" onclick ="radioFunction();">
+							<a href="">Макароны</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input  id ="powderSugarOnly" type="radio" name="productTypes" value = "valOlive" onclick ="radioFunction();">
+							<a href="">Лапша</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id= "refinedSugarOnly"type="radio" name="productTypes" value = "valSunFlower" onclick ="radioFunction();">
+							<a href="">Доширак</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id= "refinedSugarOnly"type="radio" name="productTypes" value = "valSunFlower" onclick ="radioFunction();">
+							<a href="">Вермишель</a>
+						</div>
+					</li>
+				</ul>
+				<hr>
+			</div>
+			<div class="hamburgerContainer"> 
+				<div class="hambuger1"></div>
+			    <div class="hambuger2"></div>
+			    <div class="hambuger3"></div>
+			</div> 
+			<div class="sortViewDiv">
+					<div class="result"><span class="count"></span></div>
+					<div class="view"><label class="viewlabel">Показать всё : </label><i class="fas fa-th-large selected"></i> <i class="fas fa-th"></i></div>
+					<!-- <div class="label"><label class="label">Сортировать:</label></div> -->
+					<div class="sort"><label class="label">Сортировать : </label>
+						<select class="sortField" onchange="sortList()">
+							<!-- <option selected="selected">Best Match</option> -->
+							<option value="low">Low to High</option>
+							<option value="high">High To Low</option>
+							<!-- <div>Best Match</div> -->
+						</select>
+					</div>
+			</div>
+			<div class="itemList">
+			<ul class="itemsUL"> 
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Ролтон лапша говядина 65г </a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 33.00р</span>
+				 	</div> -->
+				 	 25.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Макарон рожки гладки 400г 20шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 42.00р</span>
+				 	</div> -->
+				 	30.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a  class = "aName" href="">Щебекенские спирали 450г 28шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 50.00р</span>
+				 	</div> -->
+				 	35.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Щебекинские рожки 450г 28шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 54.00р</span>
+				 	</div> -->
+				 	35.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Роллтон лапша яичная  400гр 10шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 58.00р</span>
+				 	</div> -->
+				 	51.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Макарон ЗАРА Трубка витая 500г 20шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 65.00р</span>
+				 	</div> -->
+				 	54.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Барила спагетти 500г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 65.00р</span>
+				 	</div> -->
+				 	60.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Италпаста рожки 500г 24шт Италия</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 100.00р</span>
+				 	</div> -->
+				 	65.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Италпаста спагетти 500г 24шт Италия</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 110.00р</span>
+				 	</div> -->
+				 	65.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Италпаста спирали 500г 24шт Италия</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 286.00р</span>
+				 	</div> -->
+				 	65.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Макарон Макфа Гнездо 450г</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 150.00р</span>
+				 	</div> -->
+				 	80.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Галина бланка говяжий 10гр 48шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 156.00р</span>
+				 	</div> -->
+				 	144.00р
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Галина бланка куриные 10г 48шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 245.00р</span>
+				 	</div> -->
+				 	144.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Макарон Ситно перья 5кг 3шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	150.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">СПП вермишель 5кг 5шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	150.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">СПП спагетти 5кг 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	150.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Тверьские 5кг вермишель 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	175.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Макарон Тверьские улитки 5кг 4шт </a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	175.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Тверьские вермишель длинная 5кг 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	175.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Макарон Тверьские рифлёные 5кг 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	175.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Тверьские рожки 5кг 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	175.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Тверьские рожки витые 5кг 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	175.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Макарон Тверьские гребешки 5кг 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	175.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Тверьская спирали 5кг 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	175.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Макарон Тверьские перья глад. 5кг 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	175.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Макарон Тверьские пружинки 5кг 4шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	175.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Роллтон верм.говядина 60г 42шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	390.00р упак
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Ролтон лапша курица 65г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	500.00р упак
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Ролтон Пюре кортоф говяжья 40г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	500.00р упак
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Ролтон Пюре с сухариками 44г 24шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	500.00р упак
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Биг-ланч верм говяд 90г 24ш</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	530.00р упак
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Суп-лапша Доширак говядина 90г 24ш</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	620.00р упак
+				</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<div class="copy">Copyright © 2018</div>
+			<div class="siteInfo"> 
+				<a href=""> Site info</a>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<script type="text/javascript" src="../scripts/spaghetti.js"></script>
+
+
+</body>
+</html>

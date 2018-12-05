@@ -1,0 +1,53 @@
+
+/*When click fruit checkbox*/
+.water{ 
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When veggie bake checkbox*/
+.juice{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When meat is clicked*/
+.soda {
+	display: inline-block !important;
+	height: 250px;	
+}
+.kvas {
+	display: inline-block !important;
+	height: 250px;	
+}
+.energyDrinks {
+	display: inline-block !important;
+	height: 250px;	
+}
+
+@media screen and (max-width: 550px) {
+	.toTheRight .water{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .juice{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .soda {
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .kvas {
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .energyDrinks {
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+}
+

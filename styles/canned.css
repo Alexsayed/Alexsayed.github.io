@@ -1,0 +1,43 @@
+
+/*When click fruit checkbox*/
+.fruit{ 
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When veggie bake checkbox*/
+.veggie{
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When meat is clicked*/
+.meat{
+	display: inline-block !important;
+	height: 250px;	
+}
+.sauce{
+	display: inline-block !important;
+	height: 250px;
+}
+
+@media screen and (max-width: 550px) {
+	.toTheRight .fruit{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .veggie{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .meat{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .sauce{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+}

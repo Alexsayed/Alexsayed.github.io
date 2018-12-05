@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sugar</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../styles/sugar.css">
+	<link rel="stylesheet" type="text/css" href="../styles/milk.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+	<div id="mainContainer">
+		<header id="theHeader">
+				<nav id="myMenu" role = "myNavigation">
+					<div class="HeaderContainer">
+						<a class="myLogo" href="thelink"> Logo</a>
+						<div id="disktopContactInfo" class="onDisktop">
+							<div class="contactContainer">
+								<a class="" href="http:/www.google.com">Contact</a>
+								<a class="" href="contact link">Location</a>
+								<a class="" href="contact link">About</a>
+							</div>	
+						</div>
+						
+					</div>
+			    </nav>
+		</header>
+		<h1>Сахар</h1>
+		<div class="productTypeContainer">
+				<ul class="productTypeUl"> Вид товара
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input type="radio" name="productTypes" value = "Все Продукты"onclick ="radioFunction()">
+							<a href="">Главные</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id ="sugarOnly" type="radio" name="productTypes" value="valBake" onclick ="radioFunction();">
+							<a href="">Сахар</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id = "sandSugarOnly" type="radio" name="productTypes" value = "valCorn" onclick ="radioFunction();">
+							<a href="">Сахар Песок</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input  id ="powderSugarOnly" type="radio" name="productTypes" value = "valOlive" onclick ="radioFunction();">
+							<a href="">Сахарная Пудра</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id= "refinedSugarOnly"type="radio" name="productTypes" value = "valSunFlower" onclick ="radioFunction();">
+							<a href="">Сахар Рафинад</a>
+						</div>
+					</li>
+				</ul>
+				<hr>
+			</div>
+			<div class="hamburgerContainer"> 
+				<div class="hambuger1"></div>
+			    <div class="hambuger2"></div>
+			    <div class="hambuger3"></div>
+			</div> 
+			<div class="sortViewDiv">
+					<div class="result"><span class="count"></span></div>
+					<div class="view"><label class="viewlabel">Показать всё : </label><i class="fas fa-th-large selected"></i> <i class="fas fa-th"></i></div>
+					<!-- <div class="label"><label class="label">Сортировать:</label></div> -->
+					<div class="sort"><label class="label">Сортировать : </label>
+						<select class="sortField" onchange="sortList()">
+							<!-- <option selected="selected">Best Match</option> -->
+							<option value="low">Low to High</option>
+							<option value="high">High To Low</option>
+							<!-- <div>Best Match</div> -->
+						</select>
+					</div>
+			</div>
+			<div class="itemList">
+			<ul class="itemsUL"> 
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахарная пудра Слав. Трапеза 150г 36шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 33.00р</span>
+				 	</div> -->
+				 	 15.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар ванильный пудра Цикория 32г 120шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 42.00р</span>
+				 	</div> -->
+				 	17.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a  class = "aName" href="">Сахар раф. 500г 30шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 50.00р</span>
+				 	</div> -->
+				 	22.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар раф. 500г 20шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 54.00р</span>
+				 	</div> -->
+				 	22.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар песок Штучно 900г 20шт </a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 58.00р</span>
+				 	</div> -->
+				 	35.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар раф. 1кг 15шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 65.00р</span>
+				 	</div> -->
+				 	42.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар Вприкуску раф. 800г 20шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 65.00р</span>
+				 	</div> -->
+				 	45.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар раф. Азарбайджан 500г 10шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 100.00р</span>
+				 	</div> -->
+				 	85.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахарная пудра Натрули 1кг 10шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 110.00р</span>
+				 	</div> -->
+				 	90.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар трад. 5кг</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 286.00р</span>
+				 	</div> -->
+				 	180.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар трад. 10кг</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 150.00р</span>
+				 	</div> -->
+				 	350.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар песок 900г 20шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 156.00р</span>
+				 	</div> -->
+				 	660.00р
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар трад. 25кг</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 245.00р</span>
+				 	</div> -->
+				 	870.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сахар трад. 50кг</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 290.00р</span>
+				 	</div> -->
+				 	1690.00р шт
+				</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<div class="copy">Copyright © 2018</div>
+			<div class="siteInfo"> 
+				<a href=""> Site info</a>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<script type="text/javascript" src="../scripts/sugar.js"></script>
+
+</body>
+</html>

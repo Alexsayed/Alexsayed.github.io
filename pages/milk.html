@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Milk</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../styles/milk.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+	<div id="mainContainer">
+		<header id="theHeader">
+				<nav id="myMenu" role = "myNavigation">
+					<div class="HeaderContainer">
+						<a class="myLogo" href="thelink"> Logo</a>
+						<div id="disktopContactInfo" class="onDisktop">
+							<div class="contactContainer">
+								<a class="" href="http:/www.google.com">Contact</a>
+								<a class="" href="contact link">Location</a>
+								<a class="" href="contact link">About</a>
+							</div>
+							<!-- <div> for  search Icon</div> -->	
+						</div>
+						
+					</div>
+			    </nav>
+		</header>
+		<h1 onclick="high()">Молочные</h1>
+		
+			<div class="productTypeContainer">
+				<ul class="productTypeUl"> Вид товара
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input type="radio" name="productTypes" value = "Все Продукты"onclick ="radioFunction()">
+							<a href="">Главные</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id= "mayoOnly"type="radio" name="productTypes" value = "valMayo" onclick ="radioFunction();">
+							<a href="">Майонез</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id ="matzoonOnly" type="radio" name="productTypes" value="valMatzoon" onclick ="radioFunction();">
+							<a href="">Мацони</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id = "milkOnly" type="radio" name="productTypes" value = "milk" onclick ="radioFunction();">
+							<a href="">Молоко</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input  id ="condensedMilkOnly" type="radio" name="productTypes" value = "Сгушёнка" onclick ="radioFunction();">
+							<a href="">Сгушёнка</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id= "chzOnly" type="radio" name="productTypes" value = "Сыр" onclick ="radioFunction();">
+							<a href="">Сыр</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id= "whipCreamOnly" type="radio" name="productTypes" value = "Сливки" onclick ="radioFunction();">
+							<a href="">Сливки</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id= "butterOnly" type="radio" name="productTypes" value = "Слив. Масло" onclick ="radioFunction();">
+							<a href="">Слив. Масло</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id= "sourCreamOnly"type="radio" name="productTypes" value = "Сметана" onclick ="radioFunction();">
+							<a href="">Сметана</a>
+						</div>
+					</li>
+					<li class="productTypeLI">
+						<div class="productTypeDiv">
+							<input id= "tvorogOnly" type="radio" name="productTypes" value = "Творог" onclick ="radioFunction();">
+							<a href="">Творог</a>
+						</div>
+					</li>
+				</ul>
+				<hr>
+			</div>
+			<div class="hamburgerContainer"> 
+				<div class="hambuger1"></div>
+			    <div class="hambuger2"></div>
+			    <div class="hambuger3"></div>
+			</div> 
+		<!-- <div class="iteamsContainer"> -->
+			<div class="sortViewDiv">
+					<div class="result"><span class="count"></span></div>
+					<div class="view"><label class="viewlabel">Показать всё : </label><i class="fas fa-th-large selected"></i> <i class="fas fa-th"></i></div>
+					<!-- <div class="label"><label class="label">Сортировать:</label></div> -->
+					<div class="sort"><label class="label">Сортировать : </label>
+					<select class="sortField" onchange="sortList()">
+							<!-- <option selected="selected">Best Match</option> -->
+							<option value="low">Low to High</option>
+							<option value="high">High To Low</option>
+							<!-- <div>Best Match</div> -->
+						</select>
+					</div>
+			</div>
+			<div class="itemList">
+			<ul class="itemsUL"> 
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">МЖК Майонез 100г</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 13.00р</span>
+				 	</div> -->
+				 	 13.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">МЖК Майонез 220гр 67%</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 29.00р</span>
+				 	</div> -->
+				 	 29.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a  class = "aName" href="">Сгущёнка Варёнка 380гр ж/б Марий Эл</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 39.00р</span>
+				 	</div> -->
+				 	 39.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сгущёнка Марий Эл 500гр 30шт пэт.бут.</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 45.00р</span>
+				 	</div> -->
+				 	 45.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">МЖК 420кг Ведро 67%</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 47.00р</span>
+				 	</div> -->
+				 	 47.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сгущённое Мол. Рогачев ж\б 380г</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 56.00р</span>
+				 	</div> -->
+				 	 56.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сгущёнка Варёнка Рогачёв 380гр</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 65.00р</span>
+				 	</div> -->
+				 	 65.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сгущёнка Марий Эл 1000гр пэт.бут.</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 70.00р</span>
+				 	</div> -->
+				 	 70.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Мацони 900г</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 75.00р</span>
+				 	</div> -->
+				 	 75.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">МЖК 750кг Ведро 67%</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 75.00р</span>
+				 	</div> -->
+				 	 75.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Масло Слив. Экомилк 180гр</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 80.00р</span>
+				 	</div> -->
+				 	 80.00р шт
+				</li>
+				<li class = "itemLis bestMatch allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">МЖК Ведро 900г 67%</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 92.00р</span>
+				 	</div> -->
+				 	 92.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Масло Слив. Белорусское 500г</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 95.00р</span>
+				 	</div> -->
+				 	 95.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Масло Слив. Вологодское 82.5% 500г</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 95.00р</span>
+				 	</div> -->
+				 	 95.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сливки Чудское Озеро 500гр 22%</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 100.00р</span>
+				 	</div> -->
+				 	 100.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сгущёнка 8.5% ГОСТ Марий Эл 1.5кг</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 105.00р</span>
+				 	</div> -->
+				 	 105.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сливки ВН 500гр 33% В.Новгород</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 130.00р</span>
+				 	</div> -->
+				 	 130.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/butter.jpeg">
+						</a>
+					</div>
+					<div class = "itemsName">
+						<a class = "aName" href="">Сыр Фетакса 400гр</a>
+					</div>
+					<!-- <div class="prc">
+				 		<span class = "amt"> 155.00р</span>
+				 	</div> -->
+				 	 155.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Масло Слив. Экомилк 450гр</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 188.00р</span>
+				 	</div> -->
+				 	 188.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сыр Гауда 45%</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">кг 200.00р</span>
+				 	</div> -->
+				 	200.00р кг 
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сливки Петмолл 33% 1л</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt"> 215.00р</span>
+				 	</div> -->
+				 	 215.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сыр Моцарелла</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">кг 220.00р</span>
+				 	</div> -->
+				 	 220.00р кг
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сыр Моцарелла Тропалини</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">кг 240.00р</span>
+				 	</div> -->
+				 	 240.00р кг
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сулугуни "Кувшинка" Белоруссия</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">кг 300.00р</span>
+				 	</div> -->
+				 	 300.00р кг
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Сметана Монастырская 5кг 20% Ведро</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 320.00р</span>
+				 	</div> -->
+				 	 320.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Майонез Печагин 5л</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 350.00р</span>
+				 	</div> -->
+				 	 350.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Молоко Кружева 1л 3.2% Упак. 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">360.00р</span>
+				 	</div> -->
+				 	 360.00р упак
+				</li>
+				<li class = "notDisplayed allLis">
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/butter.jpeg">
+						</a>
+					</div>	
+					<div class = "itemsName">
+						<a class = "aName" href="">Творог 18% 5кг</a>
+					</div>
+					<!-- <div class="prc">
+				 		<span class = "amt">шт 400.00р</span>
+				 	</div> -->
+					 400.00р шт
+				</li>
+				<li class = "notDisplayed allLis">
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/butter.jpeg">
+						</a>	
+					</div>	
+					<div class = "itemsName">
+						<a class = "aName" href="">Творог Монастырский 9% 5кг</a>
+					</div>
+					<!-- <div class="prc">
+				 		<span class = "amt">шт 400.00р</span>
+				 	</div> -->
+				 	 400.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/4607057921096-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Молоко Сев. Долина 950мл 3.2% Упак. 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">444.00р</span>
+				 	</div> -->
+				 	 444.00р шт
+				</li>
+				<li class = "notDisplayed allLis">
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/butter.jpeg">
+						</a>
+					</div>	
+					<div class = "itemsName">
+						<a class = "aName" href="">Сыр Чанах 2,5 кг</a>
+					</div>
+					<!-- <div class="prc">
+				 		<span class = "amt">шт 540.00р</span>
+				 	</div> -->
+				 	 540.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Молоко Эконом 1л 6% Упак. 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">570.00р</span>
+				 	</div> -->
+				 	 570.00р шт
+				</li>
+				<li class = "notDisplayed allLis">
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+					</div>
+					<div class = "itemsName">
+						<a class = "aName" href="">Майонез "SUNNI OIL"10л 67%</a>
+					</div>
+					<!-- <div class="prc">
+				 		<span class = "amt">шт 620.00р</span>
+				 	</div> -->
+				 	 620.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Молоко Домик Деревне 1л 3.2% Упак. 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">620.00р</span>
+				 	</div> -->
+				 	 620.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Майонез Мировой Вкус 67% 10л</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 635.00р</span>
+				 	</div> -->
+				 	 635.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Молоко Пармалат 1л 3.5% с крышкой 12шт</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">636.00р</span>
+				 	</div> -->
+				 	 636.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">Майонез Донская Слобода 67% 10кг вед.</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 660.00р</span>
+				 	</div> -->
+				 	 660.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">МЖК 10кг Ведро 67%</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 770.00р</span>
+				 	</div> -->
+				 	 770.00р шт
+				</li>
+				<li class = "notDisplayed allLis"> 
+					<div class="itemswraper"> 
+						<a href="">
+							<img src="../images/mayonez_donskaya_sloboda-350x470.jpg">
+						</a>
+				 	</div>	
+				 	<div class = "itemsName">
+				 		<a class = "aName" href="">МЖК 10кг Ведро 67%</a>
+				 	</div>
+				 	<!-- <div class="prc">
+				 		<span class = "amt">шт 770.00р</span>
+				 	</div> -->
+				 	 770.00р шт
+				</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<div class="copy">Copyright © 2018</div>
+			<div class="siteInfo"> 
+				<a href=""> Site info</a>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<script type="text/javascript" src="../scripts/milk.js"></script>
+
+</body>
+</html>

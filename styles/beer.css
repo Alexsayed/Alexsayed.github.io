@@ -1,0 +1,26 @@
+
+/*When click fruit checkbox*/
+.domestic{ 
+	display: inline-block !important;
+	height: 250px;	
+}
+/*When veggie bake checkbox*/
+.foreign{
+	display: inline-block !important;
+	height: 250px;	
+}
+
+@media screen and (max-width: 550px) {
+	.toTheRight .domestic{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	.toTheRight .foreign{
+		display: block !important;
+		width: inherit;
+		line-height: 2.5em;
+	}
+	
+}
+

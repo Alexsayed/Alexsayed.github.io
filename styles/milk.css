@@ -477,14 +477,14 @@ hr{
 	.viewtoTheRight{
 		position: relative;
 		top: -255px;
-		left: 175px;
+		left: 165px;
 		width: 69%;
 	}
 	/*The css method is add in JS to products div class and sortViewDiv class*/
 	.toTheRight{
 		position: relative;
 		top: -253px;
-		left: 175px;
+		left: 165px;
 		width: 69%;
 	}
 	.viewtoTheRight .view{
@@ -672,10 +672,11 @@ hr{
 		/*font-size: 13px;*/
 	}
 	.view{
-		position: relative;
-		left: 10%;
+		/*position: relative;
+		left: 10%;*/
 		/*padding: 0 4% 0 0; 
 		margin: 12px 0 0 10px;*/
+		/*height: 20px;*/
 	}
 	.sort{
 		/*position: relative;
@@ -686,12 +687,12 @@ hr{
 	}
 	.itemList{
 		width: 87%;
-		position: relative;
+		/*position: relative;
 		top: 17px;
-		left: 50px;
+		left: 50px;*/
 	}
 	.sortViewDiv{
-		/*width: 87%;*/
+		width: 87%;
 		/*position: absolute;
 		top: 140px;
 		left: 50px;	*/
@@ -702,14 +703,14 @@ hr{
 		padding: 0 0 0 1%; */
 	}
 	.viewtoTheRight{
-		width: 55%;
+		width: 57%;
 	}
 	.toTheRight{
 		
-		position: relative;
+		/*position: relative;
 		top: -253px;
-		left: 175px;
-		width: 55%;
+		left: 170px;*/
+		width: 57%;
 	
 		/*width: 63%;*/
 	}

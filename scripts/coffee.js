@@ -24,10 +24,9 @@ var price = document.querySelectorAll(".amt");
 
 
 
-// Show the number of items in the page
-countOfItems.textContent = itemLi.length +" из " + allLis.length;
+
 selectView();
-hamburger();
+
 
 function radioFunction(){
 	for(var i =0; i<allLis.length; i++){
@@ -108,24 +107,6 @@ function radioFunction(){
 		if(whichRadio[3].checked === false){
 			allLis[i].classList.remove("espresso");		
 		}
-		// // The condensed milk radio button
-		// if(whichRadio[4].checked === true){
-		// 	allLis[i].classList.remove("itemLis");
-		// 	itemsToView[0].classList.remove("selected");
-		// 	itemsToView[1].classList.remove("selected");
-		// 	if(aName[i].textContent.includes("Горчица") ||
-		// 		aName[i].textContent.includes("Горчичный") || 
-		// 		aName[i].textContent.includes("кваса") ||
-		// 		aName[i].textContent.includes("Аджика") ) {	
-		// 		allLis[i].classList.add("sauce");
-		// 		// Count of items to dispay
-		// 		var varSauce = document.querySelectorAll(".sauce");
-		// 		countOfItems.textContent = varSauce.length+ " Результатов";
-		//  	}
-		//  }
-		// if(whichRadio[4].checked === false){
-		// 	allLis[i].classList.remove("sauce");		
-		// }
 	}		
 }
 // Show 12 items or show all items function 
@@ -181,58 +162,3 @@ function selectView(){
 	}
 }
 
-// this function is to cross the hamburger bars.
-function hamburger(){
-	hamburgerMenu.addEventListener("click", function(){
-		this.classList.toggle("change");
-		varProductTypeUl.classList.toggle("responsive");
-		sortViewDiv.classList.toggle("toTheRight");
-		itemList.classList.toggle("toTheRight");
-		
-	});
-};
-
-// The final function for sort
-	function compare(a,b){
-		// Change the String Data of <li>s to Integer Data of <li>s
-		// parseInt: is changing String to Integer.
-		// a.childNodes[0].data: means taking the the data of <li>s.
-		 parseInt(a.childNodes[0].data , 10);
-     	 parseInt(b.childNodes[0].data , 10);
-     	// Comparing <li>s  
-    	return a - b;
-    };
-   
-function sortList(){
-	// chose the <ul>
-	var ul=document.getElementsByClassName('itemsUL')[0];
-	// Set to False is it won't clone new <ul>.
-    var new_ul = ul.cloneNode(false);
-
-	// Add all lis to an array
-    var lis = [];
-    // i = ul children. Meaning <li>s
-    for(var i = ul.childNodes.length; i--;){
-    	// if the <ul> children === "LI"s. do below: 
-        if(ul.childNodes[i].nodeName === 'LI')
-        	// push them to an empty Array(lis[])
-            lis.push(ul.childNodes[i]);
-    }
-    //	if we click the Low to High option do below:
-    if(sort.value === "low"){
-    	// sort all <li>s with (compare) function. Defined line: 281
-      	lis.sort(compare);
-      	for(var i = 0; i < lis.length; i++)
-      		// In new <ul> add lis array. 
-        	new_ul.appendChild(lis[i]);
-        	// Replace old ul with new ul. Syntax: replacedNode = parentNode.replaceChild(newChild, oldChild);
-        	ul.parentNode.replaceChild(new_ul, ul);
-      }
-      // Same process but reverse. NOTE: THIS METHOD IS NOT COMPLETE NEED MOR RESEARCH 
-      else if (sort.value === "high"){
-      	lis.sort(compare);
-      	for(var i = 0; i < lis.length; i++) 
-        new_ul.appendChild(lis[i]);
-        ul.parentNode.replaceChild(new_ul, ul); 
-  }
-};

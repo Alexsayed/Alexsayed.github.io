@@ -23,12 +23,9 @@ var whichRadio = document.getElementsByName("productTypes");
 var price = document.querySelectorAll(".amt");
 
 
-// Show the number of items in the page
-countOfItems.textContent = itemLi.length +" из " + allLis.length;
 
-// howManyitemsToView();
 selectView();
-hamburger();
+
 
 function radioFunction(){
 	for(var i =0; i<allLis.length; i++){
@@ -128,17 +125,7 @@ function radioFunction(){
 	}		
 }
 
-// The low and high sort function. The call back of this fucntion is on HTML file onChange="lowHighPrice()" attribute
-// function lowHighPrice(){
-// 	if(sort.value === "high"){
-// 		itemsUL.classList.add("high");
-// 		itemsUL.classList.remove("itemsUL");
-// 	}
-// 	else if (sort.value === "low"){
-// 		itemsUL.classList.remove("high");
-// 		itemsUL.classList.add("itemsUL");
-// 	}
-// }
+
 function selectView(){
 	for(var i=0; i<itemsToView.length; i++){
 		itemsToView[i].addEventListener("click", function(){
@@ -194,63 +181,4 @@ function selectView(){
 			} 
 		})
 	}
-}
-
-// this function is to cross the hamburger bars.
-function hamburger(){
-	hamburgerMenu.addEventListener("click", function(){
-		this.classList.toggle("change");
-		varProductTypeUl.classList.toggle("responsive");
-		sortViewDiv.classList.toggle("toTheRight");
-		itemList.classList.toggle("toTheRight");
-		
-	});
 };
-
-// The final function for sort
-	function compare(a,b){
-		// Change the String Data of <li>s to Integer Data of <li>s
-		// parseInt: is changing String to Integer.
-		// a.childNodes[0].data: means taking the the data of <li>s.
-		 parseInt(a.childNodes[0].data , 10);
-     	 parseInt(b.childNodes[0].data , 10);
-     	// Comparing <li>s  
-    	return a - b;
-    };
-   
-function sortList(){
-	// chose the <ul>
-	var ul=document.getElementsByClassName('itemsUL')[0];
-	// Set to False is it won't clone new <ul>.
-    var new_ul = ul.cloneNode(false);
-
-	// Add all lis to an array
-    var lis = [];
-    // i = ul children. Meaning <li>s
-    for(var i = ul.childNodes.length; i--;){
-    	// if the <ul> children === "LI"s. do below: 
-        if(ul.childNodes[i].nodeName === 'LI')
-        	// push them to an empty Array(lis[])
-            lis.push(ul.childNodes[i]);
-    }
-    //	if we click the Low to High option do below:
-    if(sort.value === "low"){
-    	// sort all <li>s with (compare) function. Defined line: 281
-      	lis.sort(compare);
-      	for(var i = 0; i < lis.length; i++)
-      		// In new <ul> add lis array. 
-        	new_ul.appendChild(lis[i]);
-        	// Replace old ul with new ul. Syntax: replacedNode = parentNode.replaceChild(newChild, oldChild);
-        	ul.parentNode.replaceChild(new_ul, ul);
-      }
-      // Same process but reverse. NOTE: THIS METHOD IS NOT COMPLETE NEED MOR RESEARCH 
-      else if (sort.value === "high"){
-      	lis.sort(compare);
-      	for(var i = 0; i < lis.length; i++) 
-        new_ul.appendChild(lis[i]);
-        ul.parentNode.replaceChild(new_ul, ul); 
-  }
-};
-
-
-

@@ -10,9 +10,11 @@ html, body {
     overflow-x: hidden;
     font-family: 'Fjalla One', sans-serif;
     /*font-size: 5vw;*/
+    height: 100%;
 }
 #pageWrapper{
 	width: 100%;
+	position: relative;
 }
 /*Change color of all <a> tags */
 a {
@@ -32,14 +34,17 @@ a {
 }
 /* The header container*/
 .HeaderContainer{
-	padding: 0 3rem;
+	/*padding: 0 3rem;*/
+	margin: 0 0 0 30px;
 }
 /*The logo*/
 .myLogo{
-	float: left;
+	/*float: left;*/
+
+
 }
 /*The info menu*/
-.onDisktop{
+#disktopContactInfo{
 	float: right;
 	width: 250px;
 	height: 30px;
@@ -61,7 +66,7 @@ a {
 }
 #disktopContactInfo a{
 	/* The space between <a> tags in disktopContactInfo div */
-	padding-right: 1rem;	
+	margin: 0 5% 0 0;
 }
 #menuBar{
 	height: 45px;
@@ -70,6 +75,7 @@ a {
 	background-color: #4e4545;
 	padding: 0;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	width: 100%;
 }
 /* <ul> */
 #menu{
@@ -107,7 +113,7 @@ a {
 	display: none;
 	/*width: 600px;*/
 	position: absolute;
-	height: auto;
+	/*height: auto;*/
 }
 .sub {
 	/*only <ul class="sub> should be in horizontal*/
@@ -138,6 +144,7 @@ a {
 	border-radius: 5%;
 }
 
+
 .sub a:hover{
 	background-color: rgb(200, 200, 200);
 	transition: all 0.3s;
@@ -145,6 +152,7 @@ a {
 	-webkit-transition: all 0.3s;
 	/* For FireFox*/
 	-moz-transition: all 0.3s;
+
 }
 /* Mouseover for sub menus in hamburger mode*/
 a:hover + .dropDown, .dropDown:hover{
@@ -162,7 +170,17 @@ a:hover + .dropDown, .dropDown:hover{
 	border-radius: 2%;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
-
+.innerSearchBox{ 
+	display: inline-block;
+	float: right;
+	width: 165px;
+	/*background-color: #f3f3f3;*/
+	height: 15px;
+	margin-top: 9px;
+	margin-right: 100px;
+	border-radius: 2%;
+	/*box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);*/
+}
  .searchBox input{
 	outline: none;
 	padding-top: 2px;
@@ -172,6 +190,21 @@ a:hover + .dropDown, .dropDown:hover{
 	background-color: #f3f3f3;
 	border-radius: 2%;
 }
+.innerSearchBox input{
+	outline: none;
+	padding-top: 2px;
+	width: 170px;
+	padding-left: 7px;
+	height: 23px;
+	background-color: #f3f3f3;
+	border-radius: 2%;
+}
+ .searchIcon{
+	position: absolute;
+	top: 10px;
+	left: 165px;
+}
+
  span i{
 	padding-top: 4px;
 	color: #ec8c0cc9;
@@ -214,24 +247,23 @@ a:hover + .dropDown, .dropDown:hover{
 /*When the page shrinks to 600px: hide menu, move the hamburger to left and show hamburger*/
 @media screen and (max-width: 600px){
 	/*Oreginaly #menuBar li*/
-	#menu{ 
-		display: none;
-	 }
-	.hamburgerContainer{
-		float: left;
-		display: block;	
-	}
+	
 }
 
 .innerMenu{
 	display: none;
 }
+
 .innerMenu span{
 	color: #ec8c0cc9;
 	cursor: default;
 }
 @media screen and (max-width: 600px) {
+	
 	.responsive{ 
+		/*NOTE: To make a div stay at its spot and don't move by scrolling other element
+		we need to put ( position: reletive; )for it's parent element and the div itself 
+		( position: absolute; )*/
 		position: absolute;
 		top: 95px;
 		display: inline-block;
@@ -249,6 +281,16 @@ a:hover + .dropDown, .dropDown:hover{
 		float: none;
 		margin: 0 0 20px -20px;
 	}
+
+	
+	#menu{ 
+		display: none;
+	 }
+	.hamburgerContainer{
+		float: left;
+		display: block;	
+		width: 40px;
+	}
 }
 /* the Footer*/
  .copy, .siteInfo{
@@ -260,16 +302,18 @@ a:hover + .dropDown, .dropDown:hover{
  	color: #5f6368 !important;
  }
  #footer{
- 	   background-color: #f2f2f2;
- 	    border-top: 1px solid #e4e4e4;
- 	    line-height: 40px;
- 	    min-width: 980px;
- 	    font-size: 10px;
- 	    height: 40px;
- 	    width: 100%;
- 	    /*font-size: 9pt;*/
- 	    position: fixed;
- 	    top: 542px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    line-height: 40px;
+    font-size: 10px;
+    /*Real browser*/
+    /*height: auto;*/
+    height: 40px;
+    width: 100%;
+    /*font-size: 9pt;*/
+    position: relative;
+    bottom: 0;
+
  }
 
 /*HOME PAGE CSS ENDS HERE*/
@@ -324,3 +368,4 @@ a:hover + .dropDown, .dropDown:hover{
 	border:none;
 	
 }
+

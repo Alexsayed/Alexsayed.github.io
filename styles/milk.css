@@ -5,10 +5,14 @@ html, body{
 	margin: 0px;
 	padding: 0px;
 	overflow-x: hidden;
+	/*overflow-y: hidden;*/
 	font-family: 'Fjalla One', sans-serif;
 	background-color: #f1f1f1;
 	height: 100%;
 
+}
+#mainContainer{
+	position: relative;
 }
 
 a {
@@ -75,8 +79,8 @@ li{
 	width: 18%;
 	padding: 0;
 	margin: 0;
-	position: relative;
-	top: 0px;
+	position: absolute;
+	top: 110px;
 	font-size: 18px;
 	line-height: 2em; 
 	
@@ -107,8 +111,8 @@ hr{
 
 /*The Sort, view and result <div>*/
 .sortViewDiv{
-	position: relative;
-	top: -300px;
+	position: absolute;
+	top: 130px;
 	left: 18%;
 	width: 80%;
 	height: 45px;
@@ -182,14 +186,15 @@ hr{
 /*The list of the products*/
 .itemList{
 	width: 80%;
-	position: relative;
-	top: -298px;
+	position: absolute;
+	top: 177px;
 	left: 18%;
 	background-color: white;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	box-sizing: border-box;
 	overflow: hidden;
 	margin-bottom: 42px;
+	height: all;
 }
 .itemsUL{
 	text-align: center;
@@ -371,12 +376,12 @@ hr{
 
 @media screen and (max-width: 841px) {
 	.sortViewDiv{
-		position: relative;
-		top: -254px;
+		/*position: relative;
+		top: -254px;*/
 	}
 	.itemList{
-		position: relative;
-		top: -252px;
+		/*position: relative;
+		top: -252px;*/
 	}
 
 	.result span{
@@ -385,8 +390,8 @@ hr{
 		font-size: 10px;
 	}
 	.sort{
-		position: relative;
-		left: 30%;
+		/*position: relative;
+		left: 30%;*/
 		/*padding: 0 2% 0 0; 
 		margin: 12px 0 0 10px;*/
 	}
@@ -441,15 +446,15 @@ hr{
 		font-size: 13px;
 	}
 	.sortViewDiv{
-		position: relative;
-		top: 15px;
+		position: absolute;
+		top: 130px;
 		left: 50px;
 		width: 90%;
 	}
 	.itemList{
 		width: 90%;
-		position: relative;
-		top: 17px;
+		position: absolute;
+		top: 177px;
 		left: 50px;
 	}
 	.hamburgerContainer{
@@ -462,39 +467,50 @@ hr{
 	.change{
 		float: left;
 		display: block;
-		position: relative;
-		top: -256px;
+		position: absolute;
+		top: 125px;
 		left: 12px;
 
 	}
+	.productTypeContainer{
+		position: absolute;
+		top: 135px;
+	}
 	.responsive{ 
-		position: relative;
-		top: 30px;
+		/*position: absolute;
+		top: 110px;*/
+		/*position: absolute;
+		top: 10px;*/
 		display: inline-block;
 		width: 150px;
 		padding-top: 20px;
 	}
 	.viewtoTheRight{
-		position: relative;
-		top: -255px;
+		position: absolute;
+		top: 135px;
 		left: 160px;
 		width: 69%;
 	}
 	/*The css method is add in JS to products div class and sortViewDiv class*/
 	.toTheRight{
-		position: relative;
-		top: -253px;
+		position: absolute;
+		top: 182px;
 		left: 160px;
 		width: 69%;
 	}
+	.viewtoTheRight .result{
+		position: absolute;
+		/*left: 30%;*/
+
+	}
 	.viewtoTheRight .view{
-		position: relative;
-		left: 3%;
+		position: absolute;
+		left: 25%;
 
 	}
 	.viewtoTheRight .sort{
 		position: relative;
-		left: 8%;
+		left: 60%;
 
 	}
 	/*To Select child of child element:first we select parent element 
@@ -513,20 +529,12 @@ hr{
 		left: 175px;
 		width: 69%;
 	}
-	.result{
-		position: relative;
-		left: -10px !important;
-
-		/*margin: 15px 0 0;
-		padding: 0;*/
-		/*padding: 0 10% 0 0; */
-	}
 	.result span{
 		font-size: 10px;
 	}
 	.view{
-		position: relative;
-		left: 15%;
+		/*position: relative;
+		left: 15%;*/
 		/*padding: 0 4% 0 0; 
 		margin: 12px 0 0 10px;*/
 	}
@@ -535,8 +543,8 @@ hr{
 		font-size: 10px;
 	}
 	.sort{
-		position: relative;
-		left: 25%;
+		/*position: relative;
+		left: 25%;*/
 		
 		width: 130px;
 		 
@@ -638,13 +646,13 @@ hr{
 		line-height: 2.5em;
 		width: inherit;
 	}
-	.view{
-		position: relative;
-		left: 10%;
+	.viewtoTheRight .view{
+		position: absolute;
+		left: 30%;
 	}
-	.sort{
-		position: relative;
-		left: 20%;
+	.viewtoTheRight .sort{
+		position: absolute;
+		left: 70%;
 		width: 70px;
 
 	}
@@ -697,6 +705,10 @@ hr{
 		top: 140px;
 		left: 50px;	*/
 	}
+	.viewtoTheRight .view{
+		position: absolute;
+		left: 40%;
+	}
 	.sort{
 		/*margin: 10px 0 0 0;
 		width: 130px;
@@ -739,7 +751,7 @@ hr{
     bottom: 0;
 
  }*/
- /*#footer{
+ #footer{
  	background-color: #f2f2f2;
     border-top: 1px solid #e4e4e4;
     line-height: 40px;
@@ -748,7 +760,10 @@ hr{
     height: 40px;
     width: 100%;
     font-size: 9pt;
-    position: relative;
-    top: 0px;
- }*/
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+ }
  

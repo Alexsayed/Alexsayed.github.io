@@ -1,0 +1,70 @@
+html, body {
+	/* To make text color smooth or less sharp */
+	-webkit-font-smoothing: antialiased;
+	/*Height between lines*/
+	line-height: 1.2em; 
+	/*to clear all white spaces around*/
+	width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'Fjalla One', sans-serif;
+    /*font-size: 5vw;*/
+    height: 100%;
+}
+#pageWrapper{
+	width: 100%;
+	position: relative;
+}
+/*Change color of all <a> tags */
+a {
+	color: #ec8c0cc9;
+	text-decoration: none !important;	
+	/*font-size: 2vw;*/
+}
+/*The header*/
+#theHeader{
+	padding-top: 1rem;
+	height: 50px;
+	background-color: #2b5b77;
+	letter-spacing: 0.1em;
+	font-size: 14px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	/*font-size: 2vw;*/
+}
+/* The header container*/
+.HeaderContainer{
+	/*padding: 0 3rem;*/
+	margin: 0 0 0 30px;
+}
+/*The logo*/
+.myLogo{
+	/*float: left;*/
+
+
+}
+/*The info menu*/
+#disktopContactInfo{
+	float: right;
+	width: 250px;
+	height: 30px;
+}
+/*The contact container 3 elements in it */
+.contactContainer{
+	width: 270px;
+	height: 30px;
+	/* If we don't put this property the Search Icon will show in next line(under contacts, location and about) */
+	display: inline-block;
+	align-items: right;
+}
+/* Search Icon */
+.iconButton{
+	display: inline-block;
+    height: 16px;
+    width: 16px;
+    vertical-align: top;
+}
+#disktopContactInfo a{
+	/* The space between <a> tags in disktopContactInfo div */
+	margin: 0 5% 0 0;
+}

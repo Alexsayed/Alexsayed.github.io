@@ -29,7 +29,7 @@ li{
 	display: none;
 }
 /*The header*/
-#theHeader{
+/*#theHeader{
 	padding-top: 1rem;
 	height: 50px;
 	background-color: #2b5b77;
@@ -37,15 +37,15 @@ li{
 	font-size: 14px;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 
-}
+}*/
 /* The header container*/
-.HeaderContainer{
+/*.HeaderContainer{
 	padding: 0 3rem;
-}
+}*/
 /*The logo*/
-.myLogo{
+/*.myLogo{
 	float: left;
-}
+}*/
 /*The info menu*/
 .onDisktop{
 	float: right;
@@ -55,25 +55,25 @@ li{
 	
 }
 /*The contact container 3 elements in it */
-.contactContainer{
+/*.contactContainer{
 	width: 210px;
 	height: 30px;
-	/* If we don't put this property the Search Icon will show in next line(under contacts, location and about) */
+	 If we don't put this property the Search Icon will show in next line(under contacts, location and about) 
 	display: inline-block;
 	align-items: right;
-}
+}*/
 /* Search Icon */
-.iconButton{
+/*.iconButton{
 	display: inline-block;
     height: 16px;
     width: 16px;
     vertical-align: top;
-}
-#disktopContactInfo a{
-	/* The space between <a> tags in disktopContactInfo div */
+}*/
+/*#disktopContactInfo a{
+	 The space between <a> tags in disktopContactInfo div 
 	padding-right: 1rem;
 	
-}
+}*/
 
 .productTypeContainer {
 	width: 18%;

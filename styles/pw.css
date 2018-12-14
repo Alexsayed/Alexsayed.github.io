@@ -258,6 +258,14 @@ a:hover + .dropDown, .dropDown:hover{
 	color: #ec8c0cc9;
 	cursor: default;
 }
+img{
+	width: 100%;
+	height: auto;
+	/*background-size: 100% 100%;*/
+	background-size: cover;
+	/*background: no-repeat center center fixed;*/
+
+}
 @media screen and (max-width: 600px) {
 	
 	.responsive{ 

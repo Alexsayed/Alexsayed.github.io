@@ -1,14 +1,20 @@
 html, body{
 	-webkit-font-smoothing: antialiased;
-	/*line-height: 1.2em; */
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
 	overflow-x: hidden;
-	/*overflow-y: hidden;*/
 	font-family: 'Fjalla One', sans-serif;
 	background-color: #f1f1f1;
 	height: 100%;
+
+	background-image: url("../images/almonds1.jpg") !important;
+	
+	position: relative;
+	background-position: center;
+  	background-repeat: no-repeat;
+ 	background-size: cover;
+	
 
 }
 #mainContainer{
@@ -16,13 +22,17 @@ html, body{
 }
 
 a {
-	color: #ec8c0cc9;
+	color: #2e7b40;
+	/*color: #eaeaea;*/
+	/*color: #2e7b40;*/
+	/*color: #ec8c0cc9;*/
 	text-decoration: none !important;
 }
 h1{
 	padding: 10px;
 	margin: 0;
 	color: #4e4545;
+	/*color: #2e7b40;*/
 }
 /*All <li> display is set to none so i can individually set them otherwise. Used for chooseByProduct() function*/
 li{
@@ -90,8 +100,10 @@ li{
 .productTypeUl{
 	padding: 20px 0 0 20px;
 	margin: 0;
-	color: #4e4545;
+	/*color: #4e4545;*/
 	height: 296px;
+	/*color: #eaeaea;*/
+	color: #4e4545;
 
 }
 .productTypeLI {
@@ -100,13 +112,17 @@ li{
 	line-height: 1.6em; 
 	font-size: 15px;
 }
+.productTypeLI a{
+	/*color: #eaeaea;*/
+	color: #4e4545;
+}
 
 hr{
 	margin: 0;
 	padding: 0;
 	border: 0;
     height: 1px;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0),#4e4545, rgba(0, 0, 0, 0));
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0),#eaeaea, rgba(0, 0, 0, 0));
 }
 
 /*The Sort, view and result <div>*/
@@ -117,10 +133,12 @@ hr{
 	width: 80%;
 	height: 45px;
 	/*border: 1px solid #ddd;*/
-	background-color: white;
+	/*background-color: white;*/
+	background-color:#fafafa;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	box-sizing: border-box;
 	color: #4e4545;
+
 }
 .result, .view, .sort, .label, .labelTwo{
 	/*To make all <div>s side-by-side*/

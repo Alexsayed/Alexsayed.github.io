@@ -4,21 +4,33 @@ html, body {
 	/*Height between lines*/
 	line-height: 1.2em; 
 	/*to clear all white spaces around*/
-	width: 100%;
+	/*width: 100%;*/
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
     font-family: 'Fjalla One', sans-serif;
     /*font-size: 5vw;*/
-    height: 100%;
+    /*height: 100%;*/
+    /*width: 100% ;*/
+	height: 100%;
+
 }
 #pageWrapper{
-	width: 100%;
+	background-image: url("../images/almonds1.jpg") !important;
+	width: 100% ;
 	position: relative;
+	background-position: center;
+  	background-repeat: no-repeat;
+ 	 background-size: cover;
+	height: 100%;
+	/*background-image: url("../images/almonds1.jpg") !important;*/
+    /*background-size: cover;*/
+
 }
 /*Change color of all <a> tags */
 a {
-	color: #ec8c0cc9;
+	/*color: #b8c0dc59;*/
+	color: #2e7b40;
 	text-decoration: none !important;	
 	/*font-size: 2vw;*/
 }
@@ -26,10 +38,10 @@ a {
 #theHeader{
 	padding-top: 1rem;
 	height: 50px;
-	background-color: #2b5b77;
+	/*background-color: #2b5b77;*/
 	letter-spacing: 0.1em;
 	font-size: 14px;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	/*box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);*/
 	/*font-size: 2vw;*/
 }
 /* The header container*/
@@ -72,9 +84,9 @@ a {
 	height: 45px;
 	/* To hide the menu under hamburger if it's getting small*/
 	overflow: hidden;
-	background-color: #4e4545;
+	/*background-color: #4e4545;*/
 	padding: 0;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	/*box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);*/
 	width: 100%;
 }
 /* <ul> */
@@ -118,18 +130,22 @@ a {
 .sub {
 	/*only <ul class="sub> should be in horizontal*/
 	display: inline-block;
-	background-color: #e6e6e6;
+	/*background-color: #e6e6e6;*/
 	width: 200px;
 	height: inherit;
-	border-right:1px solid rgb(200, 200, 200);
-	border-left:1px solid rgb(200, 200, 200);
+	/*border-right:1px solid rgb(200, 200, 200);
+	border-left:1px solid rgb(200, 200, 200)*/;
 	margin-right: -5px;
 	padding:0px;
 	
 }
 
 .menuItem:hover{
-	background-color: #b8c0dc59;
+	/*background-color: #2e7b40;*/
+	/*background-color: #b8c0dc59;*/
+	/*background-color: #b8c0dc59;*/
+	background-color: #db995a;
+
 }
 .sub li {
 	display: block;
@@ -138,7 +154,10 @@ a {
 .sub a{
 	/*font-size: .9em;*/
 	font-weight: bold;
-	color: #4e4040cf;
+	color: #2e7b40;
+
+
+	/*color: #4e4040cf;*/
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); 
 	padding: 0 15px 0 5px;
 	border-radius: 5%;
@@ -146,7 +165,8 @@ a {
 
 
 .sub a:hover{
-	background-color: rgb(200, 200, 200);
+
+	/*background-color: rgb(200, 200, 200);*/
 	transition: all 0.3s;
 	/* For Safari*/
 	-webkit-transition: all 0.3s;
@@ -258,6 +278,10 @@ a:hover + .dropDown, .dropDown:hover{
 	color: #ec8c0cc9;
 	cursor: default;
 }
+.innerMenu a{
+	color: #ec8c0cc9;
+	
+}
 img{
 	width: 100%;
 	height: auto;
@@ -266,6 +290,13 @@ img{
 	/*background: no-repeat center center fixed;*/
 
 }
+/*@media only screen and (min-device-width: 400px) {
+  img { 
+    width: 100%;
+	background-size: 100% 100%;
+
+  }
+}*/
 @media screen and (max-width: 600px) {
 	
 	.responsive{ 
@@ -276,7 +307,7 @@ img{
 		top: 95px;
 		display: inline-block;
 		width: 200px;
-		background-color:#4e4545 ; 
+		background-color:#6e6565 ; 
 		padding-top: 10px;
 		border:1px solid gray;
 	 }
@@ -319,8 +350,10 @@ img{
     height: 40px;
     width: 100%;
     /*font-size: 9pt;*/
-    position: relative;
+    position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
 
  }
 
